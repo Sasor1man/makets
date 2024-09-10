@@ -1,4 +1,86 @@
+body {
+  color: #2F3B42;
+}
+
 header {
   height: 171.96px;
   width: auto;
+  position: relative;
+}
+header .header_top {
+  height: 108.61px;
+}
+header .header_top img {
+  position: absolute;
+  width: 68px;
+  height: 68.38px;
+  top: 24.13px;
+  left: 86px;
+}
+header .header_top p {
+  position: absolute;
+  width: 334px;
+  height: 23.13px;
+  top: 46.26px;
+  left: 184px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22.98px;
+  text-align: left;
+}
+header .header_top svg {
+  position: absolute;
+  width: 20.25px;
+  height: 20.36px;
+  top: 44.62px;
+  right: 277.38px;
+  gap: 0px;
+  opacity: 0px;
+}
+header .header_top a {
+  position: absolute;
+  width: 186px;
+  height: 24.13px;
+  top: 42.24px;
+  right: 74px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Ubuntu;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 24.13px;
+  text-align: left;
+}
+header .header_down {
+  position: relative;
+  bottom: 0;
+  height: 63.35px;
+  background: #2F3B42;
+}
+header .header_down nav {
+  position: absolute;
+  left: 189px;
+  width: 329px;
+  height: 100%;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22.98px;
+  text-align: left;
+  color: #F6F6F6;
+}
+header .header_down nav div {
+  position: relative;
+  height: 100%;
+  width: 175px;
+  border: 1px solid #3A4B55;
+  border-top: 0;
+  border-bottom: 0;
+}
+header .header_down nav div p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */
