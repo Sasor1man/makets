@@ -15,6 +15,22 @@ h2 {
   font-weight: 500;
   line-height: 40.22px;
   text-align: center;
+  margin-bottom: 58px;
+}
+
+.blue_line {
+  margin-bottom: 35px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  width: 215px;
+  height: 45px;
+  background: #C8EBFF;
+  border-radius: 42px;
+  border: none;
 }
 
 header {
@@ -175,13 +191,6 @@ header .header_down .header_left p {
 }
 .provides svg {
   margin-top: 89px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.provides h2 {
-  margin-top: 35px;
-  margin-bottom: 58px;
 }
 .provides .provides_cont {
   width: 1217px;
@@ -234,4 +243,170 @@ header .header_down .header_left p {
   line-height: 24.13px;
   text-align: left;
   max-width: 367px;
+}
+
+.models {
+  height: 810px;
+}
+.models .models_cont {
+  display: flex;
+  justify-content: center;
+}
+.models .models_cont .models_lins {
+  width: 359px;
+  height: 453px;
+  border-radius: 14px;
+  border: 1px solid #BBBBBB;
+  margin-left: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.models .models_cont .models_lins img {
+  margin-top: 49px;
+}
+.models .models_cont .models_lins h3 {
+  margin-top: 22px;
+  font-family: Ubuntu;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24.13px;
+  text-align: left;
+  color: #4B4B4B;
+}
+.models .models_cont .models_lins p {
+  margin-top: 14px;
+  font-family: Ubuntu;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22.98px;
+  text-align: left;
+  color: #4B4B4B;
+}
+.models .models_cont .models_lins button {
+  margin-top: 26px;
+}
+
+.services {
+  height: 2321px;
+  position: relative;
+}
+.services h3 {
+  text-align: center;
+  font-family: Ubuntu;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 28.73px;
+  margin-bottom: 57px;
+}
+.services .service_cont {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  height: 1937px;
+}
+.services .service_cont .service_list {
+  height: 563px;
+  width: 1558px;
+  margin-bottom: 97px;
+  position: relative;
+}
+.services .service_cont .service_list img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.services .service_cont .service_list .service_description {
+  padding-left: 183px;
+  width: 1141px;
+  height: 563px;
+  border-radius: 40px 0px 0px 40px;
+  border: 1px solid #BBBBBB;
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  background: white;
+}
+.services .service_cont .service_list .service_description h4 {
+  font-family: Ubuntu;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 34.47px;
+  text-align: left;
+  margin-top: 41px;
+}
+.services .service_cont .service_list .service_description p {
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 27.58px;
+  text-align: left;
+  width: 600px;
+  margin-top: 51px;
+}
+.services .service_cont .service_list .service_description span {
+  display: block;
+  font-family: Ubuntu;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 28.73px;
+  text-align: left;
+  margin-top: 32px;
+}
+.services .service_cont .service_list .service_description button {
+  width: 269px;
+  height: 50px;
+  margin-top: 36px;
+}
+
+.positives {
+  height: 843px;
+}
+.positives .positive_cont {
+  width: 1198px;
+  height: 418px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.positives .positive_cont .positive_list {
+  width: 370px;
+  height: 194px;
+  border-radius: 20px;
+  border: 4px solid #2D81AF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.positives .positive_cont .positive_list h3 {
+  font-family: Ubuntu;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 24.13px;
+  color: #4B4B4B;
+  margin-bottom: 17px;
+}
+.positives button {
+  margin-top: 46px;
+  width: 269px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.contacts {
+  height: 829px;
+}
+.contacts gmp-map {
+  width: 1198px;
+  height: 491px;
+  margin-top: 65px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }/*# sourceMappingURL=style.css.map */

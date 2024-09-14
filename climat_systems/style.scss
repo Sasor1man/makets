@@ -15,7 +15,22 @@ h2 {
     font-weight: 500;
     line-height: 40.22px;
     text-align: center;
+    margin-bottom: 58px;
+}
 
+.blue_line {
+    margin-bottom: 35px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+button {
+    width: 215px;
+    height: 45px;
+    background: #C8EBFF;
+    border-radius: 42px;
+    border: none;
 }
 
 header {
@@ -199,17 +214,12 @@ header {
 .provides {
     height: 1203px;
     position: relative;
+
     svg {
         margin-top: 89px;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
-    h2 {
-        margin-top: 35px;
-        margin-bottom: 58px;
-    }
+
 
     .provides_cont {
         width: 1217px;
@@ -221,12 +231,14 @@ header {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        .provides_elements{
+
+        .provides_elements {
             width: 583px;
             height: 224px;
             border: 4px solid #2D81AF;
             border-radius: 20px;
             display: flex;
+
             .provide_element_left {
                 width: 183px;
                 height: 100%;
@@ -234,16 +246,18 @@ header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 svg {
                     margin: 0;
                     position: static;
                     transform: translate(0, 0);
                 }
             }
-    
+
             .provide_element_right {
                 position: relative;
                 width: calc(100% - 183px);
+
                 h3 {
                     font-family: Ubuntu;
                     font-size: 21px;
@@ -252,9 +266,9 @@ header {
                     text-align: left;
                     margin-top: 46px;
                     margin-bottom: 22px;
-    
+
                 }
-    
+
                 p {
                     font-family: Ubuntu;
                     font-size: 21px;
@@ -268,4 +282,191 @@ header {
         }
     }
 
+}
+
+.models {
+    height: 810px;
+
+    .models_cont {
+        display: flex;
+        justify-content: center;
+
+        .models_lins {
+            width: 359px;
+            height: 453px;
+            border-radius: 14px;
+            border: 1px solid #BBBBBB;
+            margin-left: 62px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin-top: 49px;
+            }
+
+            h3 {
+                margin-top: 22px;
+                font-family: Ubuntu;
+                font-size: 21px;
+                font-weight: 400;
+                line-height: 24.13px;
+                text-align: left;
+                color: #4B4B4B;
+            }
+
+            p {
+                margin-top: 14px;
+                font-family: Ubuntu;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 22.98px;
+                text-align: left;
+                color: #4B4B4B;
+
+            }
+
+            button {
+                margin-top: 26px;
+            }
+        }
+    }
+}
+
+.services {
+    height: 2321px;
+    position: relative;
+
+    h3 {
+        text-align: center;
+        font-family: Ubuntu;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 28.73px;
+        margin-bottom: 57px;
+    }
+
+    .service_cont {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+        height: 1937px;
+
+        .service_list {
+            height: 563px;
+            width: 1558px;
+            margin-bottom: 97px;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+
+            .service_description {
+                padding-left: 183px;
+                width: 1141px;
+                height: 563px;
+                border-radius: 40px 0px 0px 40px;
+                border: 1px solid #BBBBBB;
+                z-index: 2;
+                position: absolute;
+                right: 0;
+                background: white;
+
+                h4 {
+                    font-family: Ubuntu;
+                    font-size: 30px;
+                    font-weight: 500;
+                    line-height: 34.47px;
+                    text-align: left;
+                    margin-top: 41px;
+                }
+
+                p {
+                    font-family: Ubuntu;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 27.58px;
+                    text-align: left;
+                    width: 600px;
+                    margin-top: 51px;
+                }
+
+                span {
+                    display: block;
+                    font-family: Ubuntu;
+                    font-size: 25px;
+                    font-weight: 500;
+                    line-height: 28.73px;
+                    text-align: left;
+                    margin-top: 32px;
+                }
+
+                button {
+                    width: 269px;
+                    height: 50px;
+                    margin-top: 36px;
+                }
+            }
+        }
+    }
+}
+
+.positives {
+    height: 843px;
+
+    .positive_cont {
+        width: 1198px;
+        height: 418px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        .positive_list {
+            width: 370px;
+            height: 194px;
+            border-radius: 20px;
+            border: 4px solid #2D81AF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+
+            h3 {
+                font-family: Ubuntu;
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 24.13px;
+                color: #4B4B4B;
+                margin-bottom: 17px;
+            }
+
+        }
+    }
+
+    button {
+        margin-top: 46px;
+        width: 269px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.contacts {
+    height: 829px;
+    gmp-map {
+        width: 1198px;
+        height: 491px;
+        margin-top: 65px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 }
