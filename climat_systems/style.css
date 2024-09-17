@@ -12,14 +12,6 @@ body:not(a, button) {
   box-sizing: border-box;
 }
 
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -141,11 +133,13 @@ header .header_down nav ul li span {
 }
 header .header_down nav ul #menu_cont {
   position: absolute;
-  bottom: -530px;
+  bottom: -525px;
+  left: 0px;
   width: 473px;
   height: 524px;
   background: white;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
+  display: none;
 }
 header .header_down nav ul #menu_cont a {
   display: block;
@@ -156,6 +150,9 @@ header .header_down nav ul #menu_cont a {
 }
 header .header_down nav ul #menu_cont a:hover {
   color: #2D81B0;
+}
+header .header_down nav ul #menuButton:hover #menu_cont {
+  display: block;
 }
 header .header_down .header_left {
   position: absolute;
@@ -330,6 +327,7 @@ header .header_down .header_left p {
 .services {
   height: 2321px;
   position: relative;
+  overflow: hidden;
 }
 .services h3 {
   text-align: center;
@@ -344,6 +342,10 @@ header .header_down .header_left p {
   align-items: end;
   flex-direction: column;
   height: 1937px;
+  width: 1919px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 .services .service_cont .service_list {
   height: 563px;
@@ -363,6 +365,7 @@ header .header_down .header_left p {
   height: 563px;
   border-radius: 40px 0px 0px 40px;
   border: 1px solid #BBBBBB;
+  border-right: none;
   z-index: 2;
   position: absolute;
   right: 0;
@@ -398,6 +401,16 @@ header .header_down .header_left p {
   width: 269px;
   height: 50px;
   margin-top: 36px;
+}
+.services .service_cont .service_list .service_description .service_description_bg {
+  height: 563px;
+  width: 1000px;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  transform: translate(100%, 0);
+  border: 1px solid #BBBBBB;
+  border-left: none;
 }
 
 .positives {
@@ -446,6 +459,7 @@ header .header_down .header_left p {
   height: 829px;
 }
 .contacts gmp-map {
+  display: block;
   width: 1198px;
   height: 491px;
   margin-top: 65px;
