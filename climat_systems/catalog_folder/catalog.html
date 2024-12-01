@@ -64,12 +64,12 @@
                 <span>Каталог</span>
             </aside>
             <div class="catalog_list">
-                <a href="">Кассетные кондиционеры</a>
-                <a href="">Мультисплит-системы</a>
-                <a href="">Напольно-потолочные кондиционеры</a>
-                <a href="">Канальные кондиционеры</a>
-                <a href="">Вентиляционные установки</a>
-                <a href="">Холодильные сплит-системы</a>
+                <a href="" class="button2">Кассетные кондиционеры</a>
+                <a href="" class="button2">Мультисплит-системы</a>
+                <a href="" class="button2">Напольно-потолочные кондиционеры</a>
+                <a href="" class="button2">Канальные кондиционеры</a>
+                <a href="" class="button2">Вентиляционные установки</a>
+                <a href="" class="button2">Холодильные сплит-системы</a>
             </div>
 
             </ul>
@@ -85,50 +85,76 @@
                     <img src="../pictures/models/5891.png" alt="5981">
                     <h3>Nisl bibendum enim </h3>
                     <p>25 550 руб.</p>
-                    <button>Подробнее</button>
+                    <button class="button">Подробнее</button>
                 </div>
                 <div class="models_lins">
                     <img src="../pictures/models/5892.png" alt="5892">
                     <h3>Nisl bibendum enim</h3>
                     <p>60 550 руб.</p>
-                    <button>Подробнее</button>
+                    <button class="button">Подробнее</button>
                 </div>
                 <div class="models_lins">
                     <img src="../pictures/models/5893.png" alt="5893">
-                    <h3>jyuf ketoghje nim </h3>
+                    <h3>jyuf ketoghje nim</h3>
                     <p>40 550 руб.</p>
-                    <button>Подробнее</button>
+                    <button class="button">Подробнее</button>
                 </div>
             </div>
         </div>
         <div class="shop_list">
             <div class="shop_list_form">
                 <form action="" class="price_form">
+                    <div class="select">
+                        <label for="select">Сортировать:</label>
+                        <select class="select-content button2">
+                            <option value="new">Новые</option>
+                            <option value="old">Старые</option>
+                        </select>
+                    </div>
                     <div class="price">
                         <h3>Цена</h3>
                         <label for="price">От</label>
-                        <input type="text" placeholder="291660">
+                        <input type="number" placeholder="291660">
                         <label for="price">До</label>
-                        <input type="text" placeholder="150000">
+                        <input type="number" placeholder="150000">
+                    </div>
+                    <div class="brand_form">
+                        <h3>Бренд</h3>
+                        <div>
+                            <input type="checkbox" name="Brand" id="Belluna" value="Belluna"><label
+                                for="Belluna">Belluna</label>
+                            <input type="checkbox" name="Brand" id="Daikin" value="Daikin"><label
+                                for="Daikin">Daikin</label>
+                            <input type="checkbox" name="Brand" id="Sapien" value="Sapien"><label
+                                for="Sapien">Sapien</label>
+                            <input type="checkbox" name="Brand" id="Nunc" value="Nunc"><label for="Nunc">Nunc</label>
+                            <input type="checkbox" name="Brand" id="Morbi" value="Morbi"><label
+                                for="Morbi">Morbi</label>
+                            <input type="checkbox" name="Brand" id="In-nulla" value="In-nulla"><label for="In-nulla">In
+                                nulla</label>
+                            <input type="checkbox" name="Brand" id="Mauris-interdum" value="Mauris-interdum"><label
+                                for="Mauris-interdum">Mauris interdum</label>
+                            <input type="checkbox" name="Brand" id="Quisque-sed" value="Quisque-sed"><label
+                                for="Quisque sed">Quisque sed</label>
+                            <input type="checkbox" name="Brand" id="Magna" value="Magna"><label
+                                for="Magna">Magna</label>
+                            <input type="checkbox" name="Brand" id="Blandit" value="Blandit"><label
+                                for="Blandit">Blandit</label>
+                            <input type="checkbox" name="Brand" id="Lacus" value="Lacus"><label for="Lacus">Lacus,
+                                dui</label>
+                            <input type="checkbox" name="Brand" id="Et-posuere" value="Et-posuere"><label
+                                for="Et-posuere">Et posuere</label>
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <button class="button2" id="apply">Применить</button>
+                        <button class="button2">Сбросить фильтры</button>
                     </div>
                 </form>
-                <form action="" class="brand_form">
-                    <h3>Бренд</h3>
-                    <div>
-                        <input type="checkbox" name="Belluna" id="Belluna"><label for="Belluna">Belluna</label>
-                        <input type="checkbox" name="Daikin" id="Daikin"><label for="Daikin">Daikin</label>
-                        <input type="checkbox" name="Sapien" id="Sapien"><label for="Sapien">Sapien</label>
-                        <input type="checkbox" name="Nunc" id="Nunc"><label for="Nunc">Nunc</label>
-                        <input type="checkbox" name="Morbi" id="Morbi"><label for="Morbi">Morbi</label>
-                        <input type="checkbox" name="In-nulla" id="In-nulla"><label for="In-nulla">In nulla</label>
-                        <input type="checkbox" name="Mauris-interdum" id="Mauris-interdum"><label for="Mauris-interdum">Mauris interdum</label>
-                        <input type="checkbox" name="Quisque sed" id="Quisque sed"><label for="Quisque sed">Quisque sed</label>
-                        <input type="checkbox" name="Magna" id="Magna"><label for="Magna">Magna</label>
-                        <input type="checkbox" name="Blandit" id="Blandit"><label for="Blandit">Blandit</label>
-                        <input type="checkbox" name="Lacus" id="Lacus"><label for="Lacus">Lacus, dui</label>
-                        <input type="checkbox" name="Et-posuere" id="Et-posuere"><label for="Et-posuere">Et posuere</label>
-                    </div>
-                </form>
+            </div>
+            <div class="shop-list-product">
+                <h3>Мультисплит-системы</h3>
+                <div class="output" id="output"></div>
             </div>
         </div>
     </main>
@@ -202,6 +228,8 @@
             <p> Все права защищены©promholod 2016 - 2022</p>
         </div>
     </footer>
+    <script src="events.js"></script>
+    <script src="request.js"></script>
 </body>
 
 </html>

@@ -2,17 +2,15 @@
     position: $position;
     left: 50%;
     transform: translate(-50%, 0);
-
 }
 
 body {
-    color: #2F3B42;
+    color: #2f3b42;
     font-family: Ubuntu;
 
     &:not(a, button) {
         cursor: default;
     }
-
 }
 
 *,
@@ -42,16 +40,26 @@ h2 {
     transform: translateX(-50%);
 }
 
-button {
+.button {
     width: 215px;
     height: 45px;
-    background: #C8EBFF;
+    background: #c8ebff;
     border-radius: 42px;
     border: none;
 
     &:hover {
         background: none;
-        border: 2px solid #3187B7;
+        border: 2px solid #3187b7;
+    }
+}
+
+.button2 {
+    border-radius: 10px;
+    color: #2f3b42;
+    background: none;
+    border: 1px solid #bbbbbb;
+    &:hover {
+        color: #2d81b0;
     }
 }
 
@@ -82,7 +90,6 @@ header {
             font-weight: 500;
             line-height: 22.98px;
             text-align: left;
-
         }
 
         svg {
@@ -93,7 +100,6 @@ header {
             right: 277.38px;
             gap: 0px;
             opacity: 0px;
-
         }
 
         a {
@@ -109,7 +115,6 @@ header {
             font-weight: 500;
             line-height: 24.13px;
             text-align: left;
-
         }
     }
 
@@ -117,7 +122,7 @@ header {
         position: relative;
         bottom: 0;
         height: 63.35px;
-        background: #2F3B42;
+        background: #2f3b42;
 
         nav {
             position: absolute;
@@ -127,7 +132,7 @@ header {
             font-size: 20px;
             font-weight: 400;
             line-height: 22.98px;
-            color: #F6F6F6;
+            color: #f6f6f6;
 
             ul {
                 position: relative;
@@ -139,7 +144,7 @@ header {
                     position: relative;
                     height: 100%;
                     width: 175px;
-                    border: 1px solid #3A4B55;
+                    border: 1px solid #3a4b55;
                     border-top: 0;
                     border-bottom: 0;
                     display: flex;
@@ -152,13 +157,9 @@ header {
                 }
 
                 #menuButton {
-                    background: #465A66;
+                    background: #465a66;
                 }
-
-
-
             }
-
         }
 
         .header_left {
@@ -168,7 +169,7 @@ header {
             right: 0;
             top: -8%;
             border-radius: 50px 0px 0px 50px;
-            background: #C8EBFF;
+            background: #c8ebff;
 
             p {
                 position: absolute;
@@ -178,115 +179,109 @@ header {
             }
         }
     }
+}
 
+.models_lins {
+    width: 359px;
+    height: 453px;
+    border-radius: 14px;
+    border: 1px solid #bbbbbb;
+    margin-left: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        margin-top: 49px;
+    }
+
+    h3 {
+        margin-top: 22px;
+        font-family: Ubuntu;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 24.13px;
+        text-align: left;
+        color: #4b4b4b;
+    }
+
+    p {
+        margin-top: 14px;
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22.98px;
+        text-align: left;
+        color: #4b4b4b;
+    }
+
+    button {
+        margin-top: 26px;
+    }
 }
 
 main {
     @include position-center(relative);
     max-width: 1200px;
-}
 
-.catalog {
-    position: relative;
-    height: 423px;
+    .catalog {
+        position: relative;
+        height: 423px;
 
-    &>svg {
-        margin-top: 86px;
-    }
-
-    aside {
-        position: absolute;
-        left: 0;
-        top: 75px;
-        width: 185px;
-        display: flex;
-        justify-content: space-between;
-
-        span {
-            color: #2D80AF;
+        & > svg {
+            margin-top: 86px;
         }
-    }
 
-    .catalog_list {
-        @include position-center(relative);
-        width: 1070px;
-        height: 179px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        a {
-            display: block;
-            width: 528px;
-            height: 53px;
-            border-radius: 10px;
-            border: 1px solid #BBBBBB;
-            text-align: center;
-            font-family: Ubuntu;
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 25.28px;
-            padding-top: 11px;
-
-        }
-    }
-}
-
-.models {
-    height: 810px;
-
-    .models_cont {
-        display: flex;
-        justify-content: center;
-
-        .models_lins {
-            width: 359px;
-            height: 453px;
-            border-radius: 14px;
-            border: 1px solid #BBBBBB;
-            margin-left: 62px;
+        aside {
+            position: absolute;
+            left: 0;
+            top: 75px;
+            width: 185px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
 
-            img {
-                margin-top: 49px;
+            span {
+                color: #2d80af;
             }
+        }
 
-            h3 {
-                margin-top: 22px;
+        .catalog_list {
+            @include position-center(relative);
+            width: 1070px;
+            height: 179px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            a {
+                display: block;
+                width: 528px;
+                height: 53px;
+                border-radius: 10px;
+                border: 1px solid #bbbbbb;
+                text-align: center;
                 font-family: Ubuntu;
-                font-size: 21px;
+                font-size: 22px;
                 font-weight: 400;
-                line-height: 24.13px;
-                text-align: left;
-                color: #4B4B4B;
-            }
-
-            p {
-                margin-top: 14px;
-                font-family: Ubuntu;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 22.98px;
-                text-align: left;
-                color: #4B4B4B;
-
-            }
-
-            button {
-                margin-top: 26px;
+                line-height: 25.28px;
+                padding-top: 11px;
             }
         }
     }
-}
 
-.shop_list {
-    display: flex;
-    justify-content: space-between;
+    .models {
+        height: 710px;
 
-    .shop_list_form {
-        width: 339px;
+        .models_cont {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .shop_list {
+        display: flex;
+        justify-content: space-between;
+        width: 1600px;
 
         h3 {
             font-family: Ubuntu;
@@ -297,34 +292,100 @@ main {
             margin-bottom: 13px;
         }
 
-        .price {
+        .shop_list_form {
+            width: 339px;
 
-            &>input {
-                width: 121px;
-                height: 30px;
-                border-radius: 4px;
-                border: 1px solid #BBBBBB;
-                margin: 0 8px;
-                text-align: center;
+            .select {
+                width: 400px;
+                label {
+                    margin-right: 10px;
+                    font-family: Ubuntu;
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 25.28px;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                }
+                .select-content {
+                    width: 213px;
+                    height: 53px;
+                    text-align: center;
+                    font-family: Ubuntu;
+                    font-size: 22px;
+                    font-weight: 400;
+                    line-height: 25.28px;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                }
             }
 
-            &>label {
-                font-family: Ubuntu;
-                font-size: 20px;
-                font-weight: 400;
-                line-height: 22.98px;
-                text-align: left;
+            .price {
+                & > input {
+                    width: 121px;
+                    height: 30px;
+                    border-radius: 4px;
+                    border: 1px solid #bbbbbb;
+                    margin: 0 8px;
+                    text-align: center;
+                }
 
+                & > label {
+                    font-family: Ubuntu;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 22.98px;
+                    text-align: left;
+                }
+            }
+
+            .brand_form {
+                margin-top: 68px;
+                & > div {
+                    display: grid;
+                    grid-auto-rows: 23px;
+                    grid-template-columns: 25px 1fr;
+                    gap: 9px;
+                    & > label {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+            .form-button {
+                margin-top: 41px;
+                button {
+                    height: auto;
+                    width: auto;
+                    gap: 0px;
+                    padding: 14px 47px;
+                    margin-bottom: 12px;
+                }
             }
         }
-
-        .brand_form {
-            margin-top: 68px;
-            &>div {
-                display: grid;
-                grid-auto-rows: 23px;
-                grid-template-columns: 25px 1fr;
-                gap: 9px;
+        .shop-list-product {
+            width: 100%;
+            & > h3 {
+                text-align: center;
+                margin-bottom: 66px;
+            }
+            .output {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 61px;
+                .card {
+                    margin: auto;
+                    h3 {
+                        font-family: Ubuntu;
+                        font-size: 21px;
+                        font-weight: 400;
+                        line-height: 24.13px;
+                        text-align: left;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+                    }
+                }
             }
         }
     }
@@ -332,7 +393,7 @@ main {
 
 footer {
     height: 513px;
-    background: #2F3B42;
+    background: #2f3b42;
     color: white;
     position: relative;
 
@@ -346,7 +407,7 @@ footer {
         top: 96px;
         left: 10%;
 
-        &>div {
+        & > div {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -366,7 +427,7 @@ footer {
                 display: flex;
                 flex-direction: column;
 
-                &>a {
+                & > a {
                     display: inline;
                     max-width: 137px;
                     margin-bottom: 10px;
@@ -411,7 +472,7 @@ footer {
         justify-content: space-between;
 
         p:nth-child(2) {
-            color: #9B9B9B;
+            color: #9b9b9b;
         }
     }
 }
