@@ -3,6 +3,8 @@ const outputDiv = document.getElementById('output');
 const filterApplyButton = document.getElementById('apply');
 const brandInputs = document.querySelectorAll('[name=Brand');
 
+const filterButton = document.getElementById('apply');
+
 const checkedArr = [];
 
 const saveChecked = e => {
@@ -21,3 +23,5 @@ window.addEventListener('load', e => {
         })
     }
 })
+
+filterButton.addEventListener('click', filterRequest);

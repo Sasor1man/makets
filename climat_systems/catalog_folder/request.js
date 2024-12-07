@@ -1,5 +1,3 @@
-const xhr = new XMLHttpRequest();
-
 const productList = [];
 
 const addHtml = (tag, div) => div.innerHTML = tag
@@ -11,21 +9,28 @@ const render = data => {
     <h3>${e.title}</h3>
     <p>${e.price} руб.</p>
     <button class="button">Подробнее</button>
-</div>
-        `).join('')
+    </div>
+    `).join('')
     return outputHtml
 }
 
-xhr.open('GET', "../back/bs.json");
+const filterRequest = () => {
+    const xhr = new XMLHttpRequest();
 
-xhr.responseType = 'json';
+    const filters = localStorage.getItem('checkedBoxes');
+    const queryParams = `filters=${encodeURIComponent(filters)}`;
 
-xhr.send()
+    xhr.open('GET', `http://localhost:3000?${queryParams}`);
 
-xhr.onload = arr => {
-    const get = xhr.response;
-    const modelArr = [...get];
-    addHtml(render(modelArr), outputDiv)
+    xhr.responseType = 'json';
+
+    xhr.send();
+
+    xhr.onload = arr => {
+        const response = xhr.response;
+        const get = response.filters;
+        const modelArr = [...get];
+        addHtml(render(modelArr), outputDiv)
+        console.log(get)
+    }
 }
-
-
