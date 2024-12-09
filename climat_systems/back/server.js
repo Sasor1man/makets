@@ -4,253 +4,362 @@ const brandArr = [
         "photoSrc": "../pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
-        "brand": 'Belluna'
+        "brand": 'Belluna',
+        "year": 2021,
+        "article": 12988299,
+        "category": "cassette"
     },
     {
         "title": "Daikin 1",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
-        "brand": 'Daikin'
+        "brand": 'Daikin',
+        "year": 2022,
+        "article": 58692316,
+        "category": "multisplit"
     },
     {
         "title": "Sapien 1",
         "photoSrc": "../pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
-        "brand": 'Sapien'
+        "brand": 'Sapien',
+        "year": 2023,
+        "article": 62063793,
+        "category": "ceiling-floor"
     },
     {
         "title": "Nunc 1",
         "photoSrc": "../pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
-        "brand": 'Nunc'
+        "brand": 'Nunc',
+        "year": 2019,
+        "article": 37574339,
+        "category": "canal"
     },
     {
         "title": "Morbi 1",
         "photoSrc": "../pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
-        "brand": 'Morbi'
+        "brand": 'Morbi',
+        "year": 2018,
+        "article": 90711730,
+        "category": "ventilation"
     },
     {
         "title": "In-nulla 1",
         "photoSrc": "../pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
-        "brand": 'In-nulla'
+        "brand": 'In-nulla',
+        "year": 2017,
+        "article": 77936585,
+        "category": "freeze"
     },
     {
         "title": "Mauris-interdum 1",
         "photoSrc": "../pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
-        "brand": 'Mauris-interdum'
+        "brand": 'Mauris-interdum',
+        "year": 2016,
+        "article": 17992802,
+        "category": "cassette"
     },
     {
         "title": "Quisque-sed 1",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
-        "brand": 'Quisque-sed'
+        "brand": 'Quisque-sed',
+        "year": 2015,
+        "article": 30477499,
+        "category": "multisplit"
     },
     {
         "title": "Magna 1",
         "photoSrc": "../pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
-        "brand": 'Magna'
+        "brand": 'Magna',
+        "year": 2020,
+        "article": 68220740,
+        "category": "ceiling-floor"
     },
     {
         "title": "Blandit 1",
         "photoSrc": "../pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
-        "brand": 'Blandit'
+        "brand": 'Blandit',
+        "year": 2010,
+        "article": 24072410,
+        "category": "canal"
     },
     {
         "title": "Lacus 1",
         "photoSrc": "../pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
-        "brand": 'Lacus'
+        "brand": 'Lacus',
+        "year": 2009,
+        "article": 63693803,
+        "category": "ventilation"
     },
     {
         "title": "Et-posuere 1",
         "photoSrc": "../pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
-        "brand": 'Et-posuere'
+        "brand": 'Et-posuere',
+        "year": 2008,
+        "article": 19058338,
+        "category": "freeze"
     },
     {
         "title": "Belluna 2",
         "photoSrc": "../pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
-        "brand": 'Belluna'
+        "brand": 'Belluna',
+        "year": 2021,
+        "article": 12988299,
+        "category": "cassette"
     },
     {
         "title": "Daikin 2",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
-        "brand": 'Daikin'
+        "brand": 'Daikin',
+        "year": 2022,
+        "article": 58692316,
+        "category": "multisplit"
     },
     {
         "title": "Sapien 2",
         "photoSrc": "../pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
-        "brand": 'Sapien'
+        "brand": 'Sapien',
+        "year": 2023,
+        "article": 62063793,
+        "category": "ceiling-floor"
     },
     {
         "title": "Nunc 2",
         "photoSrc": "../pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
-        "brand": 'Nunc'
+        "brand": 'Nunc',
+        "year": 2019,
+        "article": 37574339,
+        "category": "canal"
     },
     {
         "title": "Morbi 2",
         "photoSrc": "../pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
-        "brand": 'Morbi'
+        "brand": 'Morbi',
+        "year": 2018,
+        "article": 90711730,
+        "category": "ventilation"
     },
     {
         "title": "In-nulla 2",
         "photoSrc": "../pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
-        "brand": 'In-nulla'
+        "brand": 'In-nulla',
+        "year": 2017,
+        "article": 77936585,
+        "category": "freeze"
     },
     {
         "title": "Mauris-interdum 2",
         "photoSrc": "../pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
-        "brand": 'Mauris-interdum'
+        "brand": 'Mauris-interdum',
+        "year": 2016,
+        "article": 17992802,
+        "category": "cassette"
     },
     {
         "title": "Quisque-sed 2",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
-        "brand": 'Quisque-sed'
+        "brand": 'Quisque-sed',
+        "year": 2015,
+        "article": 30477499,
+        "category": "multisplit"
     },
     {
         "title": "Magna 2",
         "photoSrc": "../pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
-        "brand": 'Magna'
+        "brand": 'Magna',
+        "year": 2020,
+        "article": 68220740,
+        "category": "ceiling-floor"
     },
     {
         "title": "Blandit 2",
         "photoSrc": "../pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
-        "brand": 'Blandit'
+        "brand": 'Blandit',
+        "year": 2010,
+        "article": 24072410,
+        "category": "canal"
     },
     {
         "title": "Lacus 2",
         "photoSrc": "../pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
-        "brand": 'Lacus'
+        "brand": 'Lacus',
+        "year": 2009,
+        "article": 63693803,
+        "category": "ventilation"
     },
     {
         "title": "Et-posuere 2",
         "photoSrc": "../pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
-        "brand": 'Et-posuere'
+        "brand": 'Et-posuere',
+        "year": 2008,
+        "article": 19058338,
+        "category": "freeze"
     },
     {
         "title": "Belluna 3",
         "photoSrc": "../pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
-        "brand": 'Belluna'
+        "brand": 'Belluna',
+        "year": 2021,
+        "article": 12988299,
+        "category": "cassette"
     },
     {
         "title": "Daikin 3",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
-        "brand": 'Daikin'
+        "brand": 'Daikin',
+        "year": 2022,
+        "article": 58692316,
+        "category": "multisplit"
     },
     {
         "title": "Sapien 3",
         "photoSrc": "../pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
-        "brand": 'Sapien'
+        "brand": 'Sapien',
+        "year": 2023,
+        "article": 62063793,
+        "category": "ceiling-floor"
     },
     {
         "title": "Nunc 3",
         "photoSrc": "../pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
-        "brand": 'Nunc'
+        "brand": 'Nunc',
+        "year": 2019,
+        "article": 37574339,
+        "category": "canal"
     },
     {
         "title": "Morbi 3",
         "photoSrc": "../pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
-        "brand": 'Morbi'
+        "brand": 'Morbi',
+        "year": 2018,
+        "article": 90711730,
+        "category": "ventilation"
     },
     {
         "title": "In-nulla 3",
         "photoSrc": "../pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
-        "brand": 'In-nulla'
+        "brand": 'In-nulla',
+        "year": 2017,
+        "article": 77936585,
+        "category": "freeze"
     },
     {
         "title": "Mauris-interdum 3",
         "photoSrc": "../pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
-        "brand": 'Mauris-interdum'
+        "brand": 'Mauris-interdum',
+        "year": 2016,
+        "article": 17992802,
+        "category": "cassette"
     },
     {
         "title": "Quisque-sed 3",
         "photoSrc": "../pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
-        "brand": 'Quisque-sed'
+        "brand": 'Quisque-sed',
+        "year": 2015,
+        "article": 30477499,
+        "category": "multisplit"
     },
     {
         "title": "Magna 3",
         "photoSrc": "../pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
-        "brand": 'Magna'
+        "brand": 'Magna',
+        "year": 2020,
+        "article": 68220740,
+        "category": "ceiling-floor"
     },
     {
         "title": "Blandit 3",
         "photoSrc": "../pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
-        "brand": 'Blandit'
+        "brand": 'Blandit',
+        "year": 2010,
+        "article": 24072410,
+        "category": "canal"
     },
     {
         "title": "Lacus 3",
         "photoSrc": "../pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
-        "brand": 'Lacus'
+        "brand": 'Lacus',
+        "year": 2009,
+        "article": 63693803,
+        "category": "ventilation"
     },
     {
         "title": "Et-posuere 3",
         "photoSrc": "../pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
-        "brand": 'Et-posuere'
-    }
+        "brand": 'Et-posuere',
+        "year": 2008,
+        "article": 19058338,
+        "category": "freeze"
+    },
+
 ]
 
 const filterBrand = (arr, filterArr) => arr.filter(element => filterArr.includes(element.brand))
@@ -261,6 +370,10 @@ const server = http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type, name');
+
+    let parsedFilters;
+    let filteredBrands;
+    const brands = [...brandArr];
 
     if (request.method === 'OPTIONS') {
         response.writeHead(204);
@@ -274,7 +387,6 @@ const server = http.createServer((request, response) => {
 
         console.log('Полученные фильтры:', filters);
 
-        let parsedFilters;
         try {
             parsedFilters = JSON.parse(filters);
             console.log('Парсинг фильтров:', parsedFilters);
@@ -282,7 +394,8 @@ const server = http.createServer((request, response) => {
             console.error('Ошибка парсинга JSON:', error);
         }
 
-        const filteredBrands = filterBrand(brandArr, parsedFilters)
+        if (parsedFilters) filteredBrands = filterBrand(brands, parsedFilters)
+        else filteredBrands = brands
 
         response.writeHead(200, { 'Content-Type': 'application/json' });
         response.end(JSON.stringify({ message: "Фильтры успешно получены", filters: filteredBrands }));

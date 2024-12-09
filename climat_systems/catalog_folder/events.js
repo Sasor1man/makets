@@ -5,7 +5,6 @@ const brandInputs = document.querySelectorAll('[name=Brand');
 
 const filterButton = document.getElementById('apply');
 
-const checkedArr = [];
 
 const saveChecked = e => {
     const arrForSave = Array.from(brandInputs).filter(element => element.checked).map(element => element.value);
@@ -21,6 +20,14 @@ window.addEventListener('load', e => {
         brandInputs.forEach(element => {
             if (checkedBoxes.includes(element.value)) element.checked = true;
         })
+    }
+
+    if (window.localStorage.products) {
+        const productsArr = JSON.parse(localStorage.getItem('products'));
+        addHtml(render(productsArr), outputDiv)
+    }
+    else {
+        loadReq();
     }
 })
 

@@ -1,5 +1,13 @@
 const productList = [];
 
+const addResponce = XMLHttpRequest => {
+    const response = XMLHttpRequest.response;
+    const modelArr = response.filters;
+    addHtml(render(modelArr), outputDiv);
+    localStorage.setItem('products', JSON.stringify(modelArr));
+    console.log(modelArr)
+}
+
 const addHtml = (tag, div) => div.innerHTML = tag
 
 const render = data => {
@@ -14,6 +22,18 @@ const render = data => {
     return outputHtml
 }
 
+const loadReq = () => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', `http://localhost:3000`);
+
+    xhr.responseType = 'json';
+
+    xhr.send();
+
+    xhr.onload = addResponce(xhr)
+}
+
 const filterRequest = () => {
     const xhr = new XMLHttpRequest();
 
@@ -26,11 +46,5 @@ const filterRequest = () => {
 
     xhr.send();
 
-    xhr.onload = arr => {
-        const response = xhr.response;
-        const get = response.filters;
-        const modelArr = [...get];
-        addHtml(render(modelArr), outputDiv)
-        console.log(get)
-    }
+    xhr.onload = arr => addResponce(xhr)
 }
