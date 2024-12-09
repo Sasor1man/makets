@@ -1,21 +1,11 @@
-const outputDiv = document.getElementById('output');
-
-const filterApplyButton = document.getElementById('apply');
-const brandInputs = document.querySelectorAll('[name=Brand');
-
-const filterButton = document.getElementById('apply');
-
-
-const saveChecked = e => {
-    const arrForSave = Array.from(brandInputs).filter(element => element.checked).map(element => element.value);
-    localStorage.setItem('checkedBoxes', JSON.stringify(arrForSave));
-}
-
+priceInputs.forEach(element => element.addEventListener('selectionchange', savePrice))
 brandInputs.forEach(element => element.addEventListener('click', saveChecked))
+
+const parse = name => JSON.parse(localStorage.getItem(`${name}`))
 
 window.addEventListener('load', e => {
     if (window.localStorage.checkedBoxes) {
-        const checkedBoxes = JSON.parse(localStorage.getItem('checkedBoxes'));
+        const checkedBoxes = parse('checkedBoxes');
 
         brandInputs.forEach(element => {
             if (checkedBoxes.includes(element.value)) element.checked = true;
@@ -23,12 +13,17 @@ window.addEventListener('load', e => {
     }
 
     if (window.localStorage.products) {
-        const productsArr = JSON.parse(localStorage.getItem('products'));
+        const productsArr = parse('products');
         addHtml(render(productsArr), outputDiv)
     }
     else {
         loadReq();
     }
+
+    if (localStorage.priceInputs) {
+        const prices = parse('priceInputs')
+        prices.
+    }
 })
 
-filterButton.addEventListener('click', filterRequest);
+applyButton.addEventListener('click', filterRequest);

@@ -394,7 +394,7 @@ const server = http.createServer((request, response) => {
             console.error('Ошибка парсинга JSON:', error);
         }
 
-        if (parsedFilters) filteredBrands = filterBrand(brands, parsedFilters)
+        if (parsedFilters.length !== 0) filteredBrands = filterBrand(brands, parsedFilters)
         else filteredBrands = brands
 
         response.writeHead(200, { 'Content-Type': 'application/json' });

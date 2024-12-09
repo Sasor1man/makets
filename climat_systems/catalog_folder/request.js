@@ -35,6 +35,8 @@ const loadReq = () => {
 }
 
 const filterRequest = () => {
+    // if (!checkPrice) 
+
     const xhr = new XMLHttpRequest();
 
     const filters = localStorage.getItem('checkedBoxes');
@@ -47,4 +49,10 @@ const filterRequest = () => {
     xhr.send();
 
     xhr.onload = arr => addResponce(xhr)
+}
+
+const priceRequest = () => {
+    const xhr = new XMLHttpRequest();
+
+
 }
