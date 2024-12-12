@@ -10,8 +10,23 @@ const saveChecked = e => {
 }
 
 const savePrice = e => {
-    const priceInputsArr = Array.from(priceInputs).filter(e => !!e.value);
+    const priceInputsArr = Array.from(priceInputs).map(e => e.value);
     localStorage.setItem('priceInputs', JSON.stringify(priceInputsArr));
-    console.log(priceInputsArr)
 }
 
+const checkPrice = () => {
+    const checkForZero = element => element === 0 ? '' : element;
+    const prices = Array.from(parse('priceInputs'));
+    prices.sort((a, b) => a - b).map(e => checkForZero(e))
+    priceInputs.forEach(e => {
+        e.id === 'priceLow' ? e.value = prices[0] : e.value = prices[1]
+    })
+}
+
+document.addEventListener('click', e => {
+    const withinBoundaries = e.composedPath().includes(priceInputs[0] || priceInputs[1]);
+    if (!withinBoundaries) {
+        savePrice();
+        checkPrice();
+    }
+})

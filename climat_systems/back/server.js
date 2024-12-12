@@ -362,7 +362,9 @@ const brandArr = [
 
 ]
 
-const filterBrand = (arr, filterArr) => arr.filter(element => filterArr.includes(element.brand))
+const filterBrand = (arr, filterArr) => arr.filter(element => filterArr.includes(element.brand));
+
+const filterPrice = (arr, prices) => arr.filter(e => e.price >= prices[0] && e.price <= prices[1])
 
 const http = require("http");
 
@@ -372,8 +374,7 @@ const server = http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type, name');
 
     let parsedFilters;
-    let filteredBrands;
-    const brands = [...brandArr];
+    let filtered = [...brandArr];
 
     if (request.method === 'OPTIONS') {
         response.writeHead(204);
@@ -384,21 +385,31 @@ const server = http.createServer((request, response) => {
     if (request.method === 'GET') {
         const url = new URL(request.url, `http://${request.headers.host}`);
         const filters = url.searchParams.get('filters');
+        const prices = url.searchParams.get('prices')
 
         console.log('Полученные фильтры:', filters);
+        console.log('Полученные цены:', prices);
 
         try {
             parsedFilters = JSON.parse(filters);
             console.log('Парсинг фильтров:', parsedFilters);
         } catch (error) {
-            console.error('Ошибка парсинга JSON:', error);
+            console.error('Ошибка парсинга фильтров JSON:', error);
         }
 
-        if (parsedFilters.length !== 0) filteredBrands = filterBrand(brands, parsedFilters)
-        else filteredBrands = brands
+        try {
+            parsedPrices = JSON.parse(prices).map(element => element === '' ? 0 : parseInt(element));
+            parsedPrices.sort((a, b) => a - b)
+            console.log('Парсинг цен:', parsedPrices);
+        } catch (error) {
+            console.error('Ошибка парсинга цен JSON:', error);
+        }
+
+        if (parsedPrices.reduce((e, acc) => e + acc) > 0) filtered = filterPrice(filtered, parsedPrices);
+        if (parsedFilters.length !== 0) filtered = filterBrand(filtered, parsedFilters);
 
         response.writeHead(200, { 'Content-Type': 'application/json' });
-        response.end(JSON.stringify({ message: "Фильтры успешно получены", filters: filteredBrands }));
+        response.end(JSON.stringify({ message: "Фильтры успешно получены", filters: filtered }));
     } else {
         response.writeHead(405, { 'Content-Type': 'text/plain' });
         response.end('Метод не поддерживается');

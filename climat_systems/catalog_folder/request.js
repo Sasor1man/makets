@@ -5,7 +5,6 @@ const addResponce = XMLHttpRequest => {
     const modelArr = response.filters;
     addHtml(render(modelArr), outputDiv);
     localStorage.setItem('products', JSON.stringify(modelArr));
-    console.log(modelArr)
 }
 
 const addHtml = (tag, div) => div.innerHTML = tag
@@ -31,16 +30,21 @@ const loadReq = () => {
 
     xhr.send();
 
+    xhr.onerror = e => {
+        console.log(e)
+    }
+
     xhr.onload = addResponce(xhr)
 }
 
 const filterRequest = () => {
-    // if (!checkPrice) 
 
     const xhr = new XMLHttpRequest();
 
     const filters = localStorage.getItem('checkedBoxes');
-    const queryParams = `filters=${encodeURIComponent(filters)}`;
+    const prices = localStorage.getItem('priceInputs');
+
+    const queryParams = `filters=${encodeURIComponent(filters)}&prices=${encodeURIComponent(prices)}`;
 
     xhr.open('GET', `http://localhost:3000?${queryParams}`);
 
@@ -49,10 +53,4 @@ const filterRequest = () => {
     xhr.send();
 
     xhr.onload = arr => addResponce(xhr)
-}
-
-const priceRequest = () => {
-    const xhr = new XMLHttpRequest();
-
-
 }

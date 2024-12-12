@@ -1,4 +1,5 @@
 priceInputs.forEach(element => element.addEventListener('selectionchange', savePrice))
+priceInputs.forEach(element => element.addEventListener("input", (event) => element.value = element.value.replace(/[^0-9]/g, "")));
 brandInputs.forEach(element => element.addEventListener('click', saveChecked))
 
 const parse = name => JSON.parse(localStorage.getItem(`${name}`))
@@ -20,10 +21,8 @@ window.addEventListener('load', e => {
         loadReq();
     }
 
-    if (localStorage.priceInputs) {
-        const prices = parse('priceInputs')
-        prices.
-    }
+    if (localStorage.priceInputs) checkPrice()
+
 })
 
 applyButton.addEventListener('click', filterRequest);
