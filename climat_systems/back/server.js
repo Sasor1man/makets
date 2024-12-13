@@ -385,7 +385,8 @@ const server = http.createServer((request, response) => {
     if (request.method === 'GET') {
         const url = new URL(request.url, `http://${request.headers.host}`);
         const filters = url.searchParams.get('filters');
-        const prices = url.searchParams.get('prices')
+        const prices = url.searchParams.get('prices');
+        const select = url.searchParams.get('opt');
 
         console.log('Полученные фильтры:', filters);
         console.log('Полученные цены:', prices);
@@ -407,6 +408,12 @@ const server = http.createServer((request, response) => {
 
         if (parsedPrices.reduce((e, acc) => e + acc) > 0) filtered = filterPrice(filtered, parsedPrices);
         if (parsedFilters.length !== 0) filtered = filterBrand(filtered, parsedFilters);
+        switch (select) {
+            case 'old': filtered.sort((a, b) => a.year - b.year); break;
+            case 'new': filtered.sort((a, b) => b.year - a.year); break;
+        }
+
+        console.log(filtered)
 
         response.writeHead(200, { 'Content-Type': 'application/json' });
         response.end(JSON.stringify({ message: "Фильтры успешно получены", filters: filtered }));

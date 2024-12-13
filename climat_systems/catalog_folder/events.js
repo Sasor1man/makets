@@ -1,6 +1,7 @@
-priceInputs.forEach(element => element.addEventListener('selectionchange', savePrice))
+priceInputs.forEach(element => element.addEventListener('selectionchange', savePrice));
 priceInputs.forEach(element => element.addEventListener("input", (event) => element.value = element.value.replace(/[^0-9]/g, "")));
-brandInputs.forEach(element => element.addEventListener('click', saveChecked))
+brandInputs.forEach(element => element.addEventListener('click', saveChecked));
+select.addEventListener('click', saveOption);
 
 const parse = name => JSON.parse(localStorage.getItem(`${name}`))
 
@@ -21,7 +22,9 @@ window.addEventListener('load', e => {
         loadReq();
     }
 
-    if (localStorage.priceInputs) checkPrice()
+    if (localStorage.priceInputs) checkPrice();
+
+    if (localStorage.selectOpt) select.value = localStorage.selectOpt;
 
 })
 

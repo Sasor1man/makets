@@ -3,10 +3,16 @@ const filterApplyButton = document.getElementById('apply');
 const brandInputs = document.querySelectorAll('[name=Brand]');
 const applyButton = document.getElementById('apply');
 const priceInputs = document.querySelectorAll('input[type=number]');
+const select = document.getElementsByTagName('select')[0]
 
 const saveChecked = e => {
     const brandForSave = Array.from(brandInputs).filter(element => element.checked).map(element => element.value);
     localStorage.setItem('checkedBoxes', JSON.stringify(brandForSave));
+}
+
+const saveOption = e => {
+    const option = select.value;
+    localStorage.setItem('selectOpt', option);
 }
 
 const savePrice = e => {

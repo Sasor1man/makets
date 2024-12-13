@@ -43,8 +43,9 @@ const filterRequest = () => {
 
     const filters = localStorage.getItem('checkedBoxes');
     const prices = localStorage.getItem('priceInputs');
+    const select = localStorage.getItem('selectOpt');
 
-    const queryParams = `filters=${encodeURIComponent(filters)}&prices=${encodeURIComponent(prices)}`;
+    const queryParams = `filters=${encodeURIComponent(filters)}&prices=${encodeURIComponent(prices)}&opt=${encodeURIComponent(select)}`;
 
     xhr.open('GET', `http://localhost:3000?${queryParams}`);
 
