@@ -9,6 +9,11 @@ const addResponce = XMLHttpRequest => {
 
 const addHtml = (tag, div) => div.innerHTML = tag
 
+const error = xhr => {
+    const errorDiv = `<p>ERROR</p>`;
+    addHtml(errorDiv, outputDiv);
+}
+
 const render = data => {
     const outputHtml = data.map(e => `
     <div class="models_lins card">
@@ -30,22 +35,23 @@ const loadReq = () => {
 
     xhr.send();
 
-    xhr.onerror = e => {
-        console.log(e)
-    }
+    xhr.onerror = error(xhr);
 
-    xhr.onload = addResponce(xhr)
+    xhr.onload = arr => addResponce(xhr)
 }
 
 const filterRequest = () => {
+
+    saveOption();
 
     const xhr = new XMLHttpRequest();
 
     const filters = localStorage.getItem('checkedBoxes');
     const prices = localStorage.getItem('priceInputs');
     const select = localStorage.getItem('selectOpt');
+    const category = localStorage.getItem('catalog');
 
-    const queryParams = `filters=${encodeURIComponent(filters)}&prices=${encodeURIComponent(prices)}&opt=${encodeURIComponent(select)}`;
+    const queryParams = `category=${encodeURIComponent(category)}&filters=${encodeURIComponent(filters)}&prices=${encodeURIComponent(prices)}&opt=${encodeURIComponent(select)}`;
 
     xhr.open('GET', `http://localhost:3000?${queryParams}`);
 
@@ -53,5 +59,7 @@ const filterRequest = () => {
 
     xhr.send();
 
-    xhr.onload = arr => addResponce(xhr)
+    xhr.onerror = error(xhr);
+
+    xhr.onload = e => addResponce(xhr)
 }

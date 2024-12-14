@@ -1,7 +1,7 @@
 @mixin position-center($position) {
     position: $position;
     left: 50%;
-    transform: translate(-50%, 0);
+    translate: -50% 0;
 }
 
 body {
@@ -65,6 +65,10 @@ h2 {
     &:hover {
         color: #2d81b0;
     }
+}
+
+.active {
+    color: #2d81b0;
 }
 
 header {
@@ -257,7 +261,7 @@ main {
             flex-wrap: wrap;
             justify-content: space-between;
 
-            a {
+            button {
                 display: block;
                 width: 528px;
                 height: 53px;
@@ -268,7 +272,6 @@ main {
                 font-size: 22px;
                 font-weight: 400;
                 line-height: 25.28px;
-                padding-top: 11px;
             }
         }
     }
@@ -378,6 +381,9 @@ main {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 gap: 61px;
+                & > p {
+                    @include position-center(relative);
+                }
                 .card {
                     margin: auto;
                     h3 {

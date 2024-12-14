@@ -373,7 +373,8 @@ const server = http.createServer((request, response) => {
     response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     response.setHeader('Access-Control-Allow-Headers', 'Content-Type, name');
 
-    let parsedFilters;
+    let parsedFilters = [];
+    let parsedPrices = [];
     let filtered = [...brandArr];
 
     if (request.method === 'OPTIONS') {
@@ -387,32 +388,44 @@ const server = http.createServer((request, response) => {
         const filters = url.searchParams.get('filters');
         const prices = url.searchParams.get('prices');
         const select = url.searchParams.get('opt');
+        const gottenCategory = url.searchParams.get('category');
 
         console.log('Полученные фильтры:', filters);
         console.log('Полученные цены:', prices);
+        console.log('Полученные год:', select);
+        console.log('Полученные категория:', gottenCategory);
 
-        try {
-            parsedFilters = JSON.parse(filters);
-            console.log('Парсинг фильтров:', parsedFilters);
-        } catch (error) {
-            console.error('Ошибка парсинга фильтров JSON:', error);
+        const toFilter = () => {
+            try {
+                if (filters !== 'null') {
+                    parsedFilters = JSON.parse(filters);
+                    console.log('Парсинг фильтров:', parsedFilters);
+                }
+            } catch (error) {
+                console.error('Ошибка парсинга фильтров JSON:', error);
+            }
+
+            try {
+                if (prices !== 'null') {
+                    parsedPrices = JSON.parse(prices).map(element => element === '' ? 0 : parseInt(element));
+                    parsedPrices.sort((a, b) => a - b)
+                    console.log('Парсинг цен:', parsedPrices);
+                }
+            } catch (error) {
+                console.error('Ошибка парсинга цен JSON:', error);
+            }
+
+            if (parsedPrices.reduce((e, acc) => e + acc) > 0) filtered = filterPrice(filtered, parsedPrices);
+            if (parsedFilters.length !== 0) filtered = filterBrand(filtered, parsedFilters);
+            switch (select) {
+                case 'old': filtered.sort((a, b) => a.year - b.year); break;
+                case 'new': filtered.sort((a, b) => b.year - a.year); break;
+            }
+            filtered = filtered.filter(e => e.category === gottenCategory)
+
         }
 
-        try {
-            parsedPrices = JSON.parse(prices).map(element => element === '' ? 0 : parseInt(element));
-            parsedPrices.sort((a, b) => a - b)
-            console.log('Парсинг цен:', parsedPrices);
-        } catch (error) {
-            console.error('Ошибка парсинга цен JSON:', error);
-        }
-
-        if (parsedPrices.reduce((e, acc) => e + acc) > 0) filtered = filterPrice(filtered, parsedPrices);
-        if (parsedFilters.length !== 0) filtered = filterBrand(filtered, parsedFilters);
-        switch (select) {
-            case 'old': filtered.sort((a, b) => a.year - b.year); break;
-            case 'new': filtered.sort((a, b) => b.year - a.year); break;
-        }
-
+        filters && prices && select && gottenCategory ? toFilter() : filtered.sort((a, b) => b.year - a.year);
         console.log(filtered)
 
         response.writeHead(200, { 'Content-Type': 'application/json' });

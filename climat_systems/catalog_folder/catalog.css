@@ -59,6 +59,10 @@ h2 {
   color: #2d81b0;
 }
 
+.active {
+  color: #2d81b0;
+}
+
 header {
   height: 171.96px;
   width: auto;
@@ -202,7 +206,7 @@ header .header_down .header_left p {
 main {
   position: relative;
   left: 50%;
-  transform: translate(-50%, 0);
+  translate: -50% 0;
   max-width: 1200px;
 }
 main .catalog {
@@ -226,14 +230,14 @@ main .catalog aside span {
 main .catalog .catalog_list {
   position: relative;
   left: 50%;
-  transform: translate(-50%, 0);
+  translate: -50% 0;
   width: 1070px;
   height: 179px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-main .catalog .catalog_list a {
+main .catalog .catalog_list button {
   display: block;
   width: 528px;
   height: 53px;
@@ -244,7 +248,6 @@ main .catalog .catalog_list a {
   font-size: 22px;
   font-weight: 400;
   line-height: 25.28px;
-  padding-top: 11px;
 }
 main .models {
   height: 710px;
@@ -345,6 +348,11 @@ main .shop_list .shop-list-product .output {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 61px;
+}
+main .shop_list .shop-list-product .output > p {
+  position: relative;
+  left: 50%;
+  translate: -50% 0;
 }
 main .shop_list .shop-list-product .output .card {
   margin: auto;
