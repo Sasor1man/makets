@@ -1,4 +1,3 @@
-const productList = [];
 
 const addResponce = XMLHttpRequest => {
     const response = XMLHttpRequest.response;
@@ -16,13 +15,13 @@ const error = xhr => {
 
 const render = data => {
     const outputHtml = data.map(e => `
-    <div class="models_lins card">
-    <img src="${e.photoSrc}" alt="${e.alt}">
-    <h3>${e.title}</h3>
-    <p>${e.price} руб.</p>
-    <button class="button">Подробнее</button>
-    </div>
-    `).join('')
+            <div class="models_lins card">
+            <img src="${e.photoSrc}" alt="${e.alt}">
+            <h3>${e.title}</h3>
+            <p>${e.price} руб.</p>
+            <button class="button">Подробнее</button>
+            </div>
+            `).join('')
     return outputHtml
 }
 
@@ -63,3 +62,4 @@ const filterRequest = () => {
 
     xhr.onload = e => addResponce(xhr)
 }
+

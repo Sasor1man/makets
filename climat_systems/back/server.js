@@ -1,7 +1,7 @@
 const brandArr = [
     {
         "title": "Belluna 1",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
         "brand": 'Belluna',
@@ -11,7 +11,7 @@ const brandArr = [
     },
     {
         "title": "Daikin 1",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
         "brand": 'Daikin',
@@ -21,7 +21,7 @@ const brandArr = [
     },
     {
         "title": "Sapien 1",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
         "brand": 'Sapien',
@@ -31,7 +31,7 @@ const brandArr = [
     },
     {
         "title": "Nunc 1",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
         "brand": 'Nunc',
@@ -41,7 +41,7 @@ const brandArr = [
     },
     {
         "title": "Morbi 1",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
         "brand": 'Morbi',
@@ -51,7 +51,7 @@ const brandArr = [
     },
     {
         "title": "In-nulla 1",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
         "brand": 'In-nulla',
@@ -61,7 +61,7 @@ const brandArr = [
     },
     {
         "title": "Mauris-interdum 1",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
         "brand": 'Mauris-interdum',
@@ -71,7 +71,7 @@ const brandArr = [
     },
     {
         "title": "Quisque-sed 1",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
         "brand": 'Quisque-sed',
@@ -81,7 +81,7 @@ const brandArr = [
     },
     {
         "title": "Magna 1",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
         "brand": 'Magna',
@@ -91,7 +91,7 @@ const brandArr = [
     },
     {
         "title": "Blandit 1",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
         "brand": 'Blandit',
@@ -101,7 +101,7 @@ const brandArr = [
     },
     {
         "title": "Lacus 1",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
         "brand": 'Lacus',
@@ -111,7 +111,7 @@ const brandArr = [
     },
     {
         "title": "Et-posuere 1",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
         "brand": 'Et-posuere',
@@ -121,7 +121,7 @@ const brandArr = [
     },
     {
         "title": "Belluna 2",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
         "brand": 'Belluna',
@@ -131,7 +131,7 @@ const brandArr = [
     },
     {
         "title": "Daikin 2",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
         "brand": 'Daikin',
@@ -141,7 +141,7 @@ const brandArr = [
     },
     {
         "title": "Sapien 2",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
         "brand": 'Sapien',
@@ -151,7 +151,7 @@ const brandArr = [
     },
     {
         "title": "Nunc 2",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
         "brand": 'Nunc',
@@ -161,7 +161,7 @@ const brandArr = [
     },
     {
         "title": "Morbi 2",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
         "brand": 'Morbi',
@@ -171,7 +171,7 @@ const brandArr = [
     },
     {
         "title": "In-nulla 2",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
         "brand": 'In-nulla',
@@ -181,7 +181,7 @@ const brandArr = [
     },
     {
         "title": "Mauris-interdum 2",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
         "brand": 'Mauris-interdum',
@@ -191,7 +191,7 @@ const brandArr = [
     },
     {
         "title": "Quisque-sed 2",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
         "brand": 'Quisque-sed',
@@ -201,7 +201,7 @@ const brandArr = [
     },
     {
         "title": "Magna 2",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
         "brand": 'Magna',
@@ -211,7 +211,7 @@ const brandArr = [
     },
     {
         "title": "Blandit 2",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
         "brand": 'Blandit',
@@ -221,7 +221,7 @@ const brandArr = [
     },
     {
         "title": "Lacus 2",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
         "brand": 'Lacus',
@@ -231,7 +231,7 @@ const brandArr = [
     },
     {
         "title": "Et-posuere 2",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
         "brand": 'Et-posuere',
@@ -241,7 +241,7 @@ const brandArr = [
     },
     {
         "title": "Belluna 3",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 25550,
         "alt": 5981,
         "brand": 'Belluna',
@@ -251,7 +251,7 @@ const brandArr = [
     },
     {
         "title": "Daikin 3",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60550,
         "alt": 5982,
         "brand": 'Daikin',
@@ -261,7 +261,7 @@ const brandArr = [
     },
     {
         "title": "Sapien 3",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 40550,
         "alt": 5983,
         "brand": 'Sapien',
@@ -271,7 +271,7 @@ const brandArr = [
     },
     {
         "title": "Nunc 3",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 35550,
         "alt": 5984,
         "brand": 'Nunc',
@@ -281,7 +281,7 @@ const brandArr = [
     },
     {
         "title": "Morbi 3",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 70550,
         "alt": 5985,
         "brand": 'Morbi',
@@ -291,7 +291,7 @@ const brandArr = [
     },
     {
         "title": "In-nulla 3",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 45550,
         "alt": 5986,
         "brand": 'In-nulla',
@@ -301,7 +301,7 @@ const brandArr = [
     },
     {
         "title": "Mauris-interdum 3",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 20000,
         "alt": 5981,
         "brand": 'Mauris-interdum',
@@ -311,7 +311,7 @@ const brandArr = [
     },
     {
         "title": "Quisque-sed 3",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 60000,
         "alt": 5982,
         "brand": 'Quisque-sed',
@@ -321,7 +321,7 @@ const brandArr = [
     },
     {
         "title": "Magna 3",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 49550,
         "alt": 5983,
         "brand": 'Magna',
@@ -331,7 +331,7 @@ const brandArr = [
     },
     {
         "title": "Blandit 3",
-        "photoSrc": "../pictures/models/5891.png",
+        "photoSrc": "pictures/models/5891.png",
         "price": 34000,
         "alt": 5984,
         "brand": 'Blandit',
@@ -341,7 +341,7 @@ const brandArr = [
     },
     {
         "title": "Lacus 3",
-        "photoSrc": "../pictures/models/5892.png",
+        "photoSrc": "pictures/models/5892.png",
         "price": 45500,
         "alt": 5985,
         "brand": 'Lacus',
@@ -351,7 +351,7 @@ const brandArr = [
     },
     {
         "title": "Et-posuere 3",
-        "photoSrc": "../pictures/models/5893.png",
+        "photoSrc": "pictures/models/5893.png",
         "price": 47000,
         "alt": 5986,
         "brand": 'Et-posuere',
@@ -378,6 +378,7 @@ const server = http.createServer((request, response) => {
     let filtered = [...brandArr];
 
     if (request.method === 'OPTIONS') {
+        6
         response.writeHead(204);
         response.end();
         return;
@@ -421,11 +422,12 @@ const server = http.createServer((request, response) => {
                 case 'old': filtered.sort((a, b) => a.year - b.year); break;
                 case 'new': filtered.sort((a, b) => b.year - a.year); break;
             }
-            filtered = filtered.filter(e => e.category === gottenCategory)
+
+            if (gottenCategory !== 'null') filtered = filtered.filter(e => e.category === gottenCategory)
 
         }
 
-        filters && prices && select && gottenCategory ? toFilter() : filtered.sort((a, b) => b.year - a.year);
+        filters && prices && select ? toFilter() : filtered.sort((a, b) => b.year - a.year);
         console.log(filtered)
 
         response.writeHead(200, { 'Content-Type': 'application/json' });

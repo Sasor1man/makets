@@ -1,40 +1,5 @@
-body {
-  color: #2f3b42;
-  font-family: Ubuntu;
-}
-body:not(a, button) {
-  cursor: default;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h2 {
-  font-family: Ubuntu;
-  font-size: 35px;
-  font-weight: 500;
-  line-height: 40.22px;
-  text-align: center;
-  margin-bottom: 58px;
-}
-
 .invalid-input {
   border: solid red 2px;
-}
-
-.blue_line {
-  margin-bottom: 35px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .button {
@@ -63,109 +28,12 @@ h2 {
   color: #2d81b0;
 }
 
-header {
-  height: 171.96px;
-  width: auto;
-  position: relative;
-}
-header .header_top {
-  height: 108.61px;
-}
-header .header_top img {
-  position: absolute;
-  width: 68px;
-  height: 68.38px;
-  top: 24.13px;
-  left: 86px;
-}
-header .header_top p {
-  position: absolute;
-  width: 334px;
-  height: 23.13px;
-  top: 46.26px;
-  left: 184px;
-  font-family: Ubuntu;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 22.98px;
-  text-align: left;
-}
-header .header_top svg {
-  position: absolute;
-  width: 20.25px;
-  height: 20.36px;
-  top: 44.62px;
-  right: 277.38px;
-  gap: 0px;
-  opacity: 0px;
-}
-header .header_top a {
-  position: absolute;
-  width: 186px;
-  height: 24.13px;
-  top: 42.24px;
-  right: 74px;
-  gap: 0px;
-  opacity: 0px;
-  font-family: Ubuntu;
-  font-size: 21px;
-  font-weight: 500;
-  line-height: 24.13px;
-  text-align: left;
-}
-header .header_down {
-  position: relative;
-  bottom: 0;
-  height: 63.35px;
-  background: #2f3b42;
-}
-header .header_down nav {
-  position: absolute;
-  left: 189px;
-  width: 329px;
-  height: 100%;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 22.98px;
-  color: #f6f6f6;
-}
-header .header_down nav ul {
-  position: relative;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-header .header_down nav ul li {
-  position: relative;
-  height: 100%;
-  width: 175px;
-  border: 1px solid #3a4b55;
-  border-top: 0;
-  border-bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header .header_down nav ul li span {
-  margin-right: 16.32px;
-}
-header .header_down nav ul #menuButton {
+.active-catalog {
   background: #465a66;
 }
-header .header_down .header_left {
-  position: absolute;
-  width: 468px;
-  height: 77.43px;
-  right: 0;
-  top: -8%;
-  border-radius: 50px 0px 0px 50px;
-  background: #c8ebff;
-}
-header .header_down .header_left p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
+#returnMain {
+  cursor: pointer;
 }
 
 .models_lins {
@@ -203,20 +71,20 @@ header .header_down .header_left p {
   margin-top: 26px;
 }
 
-main {
+.catalog {
   position: relative;
   left: 50%;
   translate: -50% 0;
   max-width: 1200px;
 }
-main .catalog {
+.catalog .catalog {
   position: relative;
   height: 423px;
 }
-main .catalog > svg {
+.catalog .catalog > svg {
   margin-top: 86px;
 }
-main .catalog aside {
+.catalog .catalog aside {
   position: absolute;
   left: 0;
   top: 75px;
@@ -224,10 +92,10 @@ main .catalog aside {
   display: flex;
   justify-content: space-between;
 }
-main .catalog aside span {
+.catalog .catalog aside span {
   color: #2d80af;
 }
-main .catalog .catalog_list {
+.catalog .catalog .catalog_list {
   position: relative;
   left: 50%;
   translate: -50% 0;
@@ -237,7 +105,7 @@ main .catalog .catalog_list {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-main .catalog .catalog_list button {
+.catalog .catalog .catalog_list button {
   display: block;
   width: 528px;
   height: 53px;
@@ -249,19 +117,19 @@ main .catalog .catalog_list button {
   font-weight: 400;
   line-height: 25.28px;
 }
-main .models {
+.catalog .models {
   height: 710px;
 }
-main .models .models_cont {
+.catalog .models .models_cont {
   display: flex;
   justify-content: center;
 }
-main .shop_list {
+.catalog .shop_list {
   display: flex;
   justify-content: space-between;
   width: 1600px;
 }
-main .shop_list h3 {
+.catalog .shop_list h3 {
   font-family: Ubuntu;
   font-size: 22px;
   font-weight: 500;
@@ -269,13 +137,13 @@ main .shop_list h3 {
   text-align: left;
   margin-bottom: 13px;
 }
-main .shop_list .shop_list_form {
+.catalog .shop_list .shop_list_form {
   width: 339px;
 }
-main .shop_list .shop_list_form .select {
+.catalog .shop_list .shop_list_form .select {
   width: 400px;
 }
-main .shop_list .shop_list_form .select label {
+.catalog .shop_list .shop_list_form .select label {
   margin-right: 10px;
   font-family: Ubuntu;
   font-size: 22px;
@@ -286,7 +154,7 @@ main .shop_list .shop_list_form .select label {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
-main .shop_list .shop_list_form .select .select-content {
+.catalog .shop_list .shop_list_form .select .select-content {
   width: 213px;
   height: 53px;
   text-align: center;
@@ -298,7 +166,7 @@ main .shop_list .shop_list_form .select .select-content {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
-main .shop_list .shop_list_form .price > input {
+.catalog .shop_list .shop_list_form .price > input {
   width: 121px;
   height: 30px;
   border-radius: 4px;
@@ -306,58 +174,58 @@ main .shop_list .shop_list_form .price > input {
   margin: 0 8px;
   text-align: center;
 }
-main .shop_list .shop_list_form .price > label {
+.catalog .shop_list .shop_list_form .price > label {
   font-family: Ubuntu;
   font-size: 20px;
   font-weight: 400;
   line-height: 22.98px;
   text-align: left;
 }
-main .shop_list .shop_list_form .brand_form {
+.catalog .shop_list .shop_list_form .brand_form {
   margin-top: 68px;
 }
-main .shop_list .shop_list_form .brand_form > div {
+.catalog .shop_list .shop_list_form .brand_form > div {
   display: grid;
   grid-auto-rows: 23px;
   grid-template-columns: 25px 1fr;
   gap: 9px;
 }
-main .shop_list .shop_list_form .brand_form > div > label {
+.catalog .shop_list .shop_list_form .brand_form > div > label {
   display: flex;
   align-items: center;
 }
-main .shop_list .shop_list_form .form-button {
+.catalog .shop_list .shop_list_form .form-button {
   margin-top: 41px;
 }
-main .shop_list .shop_list_form .form-button button {
+.catalog .shop_list .shop_list_form .form-button button {
   height: auto;
   width: auto;
   gap: 0px;
   padding: 14px 47px;
   margin-bottom: 12px;
 }
-main .shop_list .shop-list-product {
+.catalog .shop_list .shop-list-product {
   width: 100%;
 }
-main .shop_list .shop-list-product > h3 {
+.catalog .shop_list .shop-list-product > h3 {
   text-align: center;
   margin-bottom: 66px;
 }
-main .shop_list .shop-list-product .output {
+.catalog .shop_list .shop-list-product .output {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 61px;
 }
-main .shop_list .shop-list-product .output > p {
+.catalog .shop_list .shop-list-product .output > p {
   position: relative;
   left: 50%;
   translate: -50% 0;
 }
-main .shop_list .shop-list-product .output .card {
+.catalog .shop_list .shop-list-product .output .card {
   margin: auto;
 }
-main .shop_list .shop-list-product .output .card h3 {
+.catalog .shop_list .shop-list-product .output .card h3 {
   font-family: Ubuntu;
   font-size: 21px;
   font-weight: 400;

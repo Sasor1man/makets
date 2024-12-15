@@ -4,44 +4,8 @@
     translate: -50% 0;
 }
 
-body {
-    color: #2f3b42;
-    font-family: Ubuntu;
-
-    &:not(a, button) {
-        cursor: default;
-    }
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-h2 {
-    font-family: Ubuntu;
-    font-size: 35px;
-    font-weight: 500;
-    line-height: 40.22px;
-    text-align: center;
-    margin-bottom: 58px;
-}
-
 .invalid-input {
     border: solid red 2px;
-}
-
-.blue_line {
-    margin-bottom: 35px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .button {
@@ -71,122 +35,12 @@ h2 {
     color: #2d81b0;
 }
 
-header {
-    height: 171.96px;
-    width: auto;
-    position: relative;
+.active-catalog {
+    background: #465a66;
+}
 
-    .header_top {
-        height: 108.61px;
-
-        img {
-            position: absolute;
-            width: 68px;
-            height: 68.38px;
-            top: 24.13px;
-            left: 86px;
-        }
-
-        p {
-            position: absolute;
-            width: 334px;
-            height: 23.13px;
-            top: 46.26px;
-            left: 184px;
-            font-family: Ubuntu;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 22.98px;
-            text-align: left;
-        }
-
-        svg {
-            position: absolute;
-            width: 20.25px;
-            height: 20.36px;
-            top: 44.62px;
-            right: 277.38px;
-            gap: 0px;
-            opacity: 0px;
-        }
-
-        a {
-            position: absolute;
-            width: 186px;
-            height: 24.13px;
-            top: 42.24px;
-            right: 74px;
-            gap: 0px;
-            opacity: 0px;
-            font-family: Ubuntu;
-            font-size: 21px;
-            font-weight: 500;
-            line-height: 24.13px;
-            text-align: left;
-        }
-    }
-
-    .header_down {
-        position: relative;
-        bottom: 0;
-        height: 63.35px;
-        background: #2f3b42;
-
-        nav {
-            position: absolute;
-            left: 189px;
-            width: 329px;
-            height: 100%;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 22.98px;
-            color: #f6f6f6;
-
-            ul {
-                position: relative;
-                height: 100%;
-                display: flex;
-                justify-content: space-between;
-
-                li {
-                    position: relative;
-                    height: 100%;
-                    width: 175px;
-                    border: 1px solid #3a4b55;
-                    border-top: 0;
-                    border-bottom: 0;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    span {
-                        margin-right: 16.32px;
-                    }
-                }
-
-                #menuButton {
-                    background: #465a66;
-                }
-            }
-        }
-
-        .header_left {
-            position: absolute;
-            width: 468px;
-            height: 77.43px;
-            right: 0;
-            top: -8%;
-            border-radius: 50px 0px 0px 50px;
-            background: #c8ebff;
-
-            p {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-    }
+#returnMain {
+    cursor: pointer;
 }
 
 .models_lins {
@@ -228,7 +82,7 @@ header {
     }
 }
 
-main {
+.catalog {
     @include position-center(relative);
     max-width: 1200px;
 

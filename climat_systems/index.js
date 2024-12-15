@@ -1,22 +1,49 @@
-const menu = document.getElementById('menu_cont');
-const menuButton = document.getElementById('menuButton');
+const loadDiv = document.getElementById('load');
+const catalogButton = document.querySelector('[value=menuButton]')
 
-function dropDown(element) {
-    element.classList.remove('hide');
-    element.classList.add('show');
+const mainPageRequest = () => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "back/page1.html");
+
+    xhr.send();
+
+    xhr.onload = () => {
+        loadDiv.removeAttribute('class');
+        loadDiv.innerHTML = xhr.responseText;
+        localStorage.setItem('pageNum', 0);
+        catalogButton.removeAttribute('class');
+        catalogButton.setAttribute('id', 'menuButton');
+    }
 }
 
-const disappear = (element) => {
-    element.classList.remove('show');
-    element.classList.add('hide');
+const catalogPageRequest = () => {
+    const xhr = new XMLHttpRequest();
+
+    xhr.open("GET", "back/page2.html");
+
+    xhr.send();
+
+    xhr.onload = () => {
+        loadDiv.innerHTML = xhr.responseText;
+        localStorage.setItem('pageNum', 1);
+        loadDiv.classList.add('catalog');
+        script();
+        catalogButton.removeAttribute('id');
+        catalogButton.classList.add('active-catalog');
+        mainLink = document.getElementById('returnMain');
+        mainLink.addEventListener('click', mainPageRequest);
+    }
 }
 
-menuButton.onclick = function () {
-    dropDown(menu);
-}
+window.addEventListener('load', e => {
+    const currentPage = localStorage.getItem('pageNum')
+    switch (currentPage) {
+        case '0': mainPageRequest(); break;
+        case '1': catalogPageRequest(); break;
+        default: mainPageRequest();
+    }
 
-document.addEventListener('click', function (event) {
-    if (!menuButton.contains(event.target)) {
-        disappear(menu);
-    };
 })
+
+catalogButton.addEventListener('click', catalogPageRequest);
