@@ -70,7 +70,7 @@ const script = () => {
             <img src="${e.photoSrc}" alt="${e.alt}">
             <h3>${e.title}</h3>
             <p>${e.price} руб.</p>
-            <button class="button">Подробнее</button>
+            <button class="button" value="moreBtn">Подробнее</button>
             </div>
             `).join('')
         return outputHtml
@@ -126,7 +126,6 @@ const script = () => {
 
     const parse = name => JSON.parse(localStorage.getItem(`${name}`))
 
-    // window.addEventListener('load', e => {
     const load = () => {
 
         if (window.localStorage.checkedBoxes) {
@@ -151,11 +150,10 @@ const script = () => {
 
         if (localStorage.catalog) {
             const category = localStorage.catalog;
-            const catalogBtns = Array.from(catalog.querySelectorAll('.button2'))
+            const catalogBtns = Array.from(catalog.querySelectorAll('[name=catalog]'))
             catalogBtns.find(button => button.value === category).classList.add('active');
         }
     }
-    // }
     load()
 
     document.addEventListener('click', e => {

@@ -71,6 +71,18 @@
   margin-top: 26px;
 }
 
+aside {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 185px;
+  display: flex;
+  justify-content: space-between;
+}
+aside span {
+  color: #2d80af;
+}
+
 .catalog {
   position: relative;
   left: 50%;
@@ -83,17 +95,6 @@
 }
 .catalog .catalog > svg {
   margin-top: 86px;
-}
-.catalog .catalog aside {
-  position: absolute;
-  left: 0;
-  top: 75px;
-  width: 185px;
-  display: flex;
-  justify-content: space-between;
-}
-.catalog .catalog aside span {
-  color: #2d80af;
 }
 .catalog .catalog .catalog_list {
   position: relative;

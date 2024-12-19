@@ -1,0 +1,151 @@
+.product-main {
+  position: relative;
+  left: 50%;
+  translate: -50% 0;
+  height: 100px;
+  max-width: 1200px;
+  height: 980px;
+}
+.product-main > aside {
+  width: 607px;
+}
+.product-main > img {
+  width: 641px;
+  height: 592px;
+  position: absolute;
+  top: 252.04px;
+  left: 53px;
+}
+.product-main > .product-title {
+  position: absolute;
+  left: 861px;
+  top: 252.04px;
+  width: 327px;
+}
+.product-main > .product-title > h3 {
+  position: relative;
+  top: 21px;
+  text-align: center;
+}
+.product-main > .product-title > .product-mainInfo {
+  position: relative;
+  top: 56px;
+  width: 354px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-main > .product-title > .product-mainInfo > p {
+  font-weight: 400;
+  font-family: Ubuntu;
+  font-size: 22px;
+  line-height: 25.28px;
+}
+.product-main > .product-title > .product-mainInfo > p span {
+  font-weight: 500;
+}
+.product-main > .product-title > .product-price {
+  position: relative;
+  top: 100px;
+  height: 121px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-main > .product-title > .product-price > h2 {
+  margin: 0;
+  text-align: left;
+}
+.product-main > .product-title > .product-price > .button {
+  width: 215px;
+  height: 51px;
+}
+.product-main > .product-title > p {
+  position: relative;
+  top: 159px;
+  width: 686px;
+  height: 125px;
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 25.28px;
+  color: #3187b7;
+}
+
+.product-description {
+  position: relative;
+  left: 50%;
+  translate: -50% 0;
+  height: 1059px;
+  max-width: 1200px;
+}
+.product-description > .grey-line {
+  width: 100%;
+  height: 1px;
+  background: grey;
+}
+.product-description > .grey-line:last-child {
+  margin-top: 74px;
+}
+.product-description > .blue-line {
+  width: 147px;
+  height: 5px;
+  background-color: blue;
+  border-radius: 5px;
+  translate: 0 -50%;
+}
+.product-description h3 {
+  margin-top: 17px;
+  font-family: Ubuntu;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 27.58px;
+  display: inline-block;
+  margin-right: 91px;
+  width: auto;
+}
+.product-description .moveble {
+  display: flex;
+  height: auto;
+}
+.product-description .moveble .description ul {
+  margin-top: 64px;
+  height: 816px;
+  list-style: url(Ellipse\ 18.svg);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.product-description .moveble .description ul > li {
+  width: 861px;
+  font-family: Ubuntu;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 24.13px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  padding-left: 50px;
+  color: #565656;
+}
+.product-description .moveble .characteristic ul {
+  margin-top: 64px;
+  height: 833px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  list-style: disc;
+}
+.product-description .moveble .characteristic ul li {
+  font-family: Ubuntu;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29.8px;
+  text-align: left;
+  text-underline-position: from-font;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #565656;
+}/*# sourceMappingURL=product.css.map */
