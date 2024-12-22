@@ -1,6 +1,18 @@
 const loadDiv = document.getElementById('load');
 const catalogButton = document.querySelector('[value=menuButton]');
 const moreButton = document.querySelector('[value=moreBtn]');
+const navButtons = document.getElementById('menu_cont');
+
+const translateCategory = category => {
+    switch (category) {
+        case 'cassette': return 'Кассетные кондиционеры';
+        case 'multisplit': return 'Мультисплит-системы';
+        case 'ceiling-floor': return 'Напольно-потолочные кондиционеры';
+        case 'canal': return 'Канальные кондиционеры';
+        case 'ventilation': return 'Вентиляционные установки';
+        case 'freeze': return 'Холодильные сплит-системы';
+    }
+}
 
 const mainPageRequest = () => {
     const xhr = new XMLHttpRequest();
@@ -11,11 +23,16 @@ const mainPageRequest = () => {
 
     xhr.onload = () => {
         loadDiv.removeAttribute('class');
+        window.location.hash = 'main'
         loadDiv.innerHTML = xhr.responseText;
-        localStorage.setItem('pageNum', 0);
         catalogButton.removeAttribute('class');
         catalogButton.setAttribute('id', 'menuButton');
     }
+}
+
+const returnMain = () => {
+    const mainLink = document.getElementById('returnMain');
+    mainLink?.addEventListener('click', mainPageRequest);
 }
 
 const catalogPageRequest = () => {
@@ -27,15 +44,14 @@ const catalogPageRequest = () => {
 
     xhr.onload = () => {
         loadDiv.innerHTML = xhr.responseText;
-        localStorage.setItem('pageNum', 1);
         loadDiv.classList.add('catalog');
         script();
         catalogButton.removeAttribute('id');
         catalogButton.classList.add('active-catalog');
-        mainLink = document.getElementById('returnMain');
-        mainLink.addEventListener('click', mainPageRequest);
+        returnMain()
     }
 }
+
 const descriptionPageRequest = () => {
     const xhr = new XMLHttpRequest();
 
@@ -44,21 +60,36 @@ const descriptionPageRequest = () => {
     xhr.send();
 
     xhr.onload = () => {
-        loadDiv.innerHTML = xhr.responseText;
+        const cardName = localStorage.getItem('currentProductName')
+        const products = JSON.parse(localStorage.getItem('products'));
+        const currentProduct = products.find(e => e.title === cardName);
+        let html = xhr.responseText;
+        window.location.hash = currentProduct.title
 
+        html = html.replace(/\$\{currentProduct\.category\}/g, translateCategory(currentProduct.category));
+        html = html.replace(/\$\{currentProduct\.title\}/g, currentProduct.title);
+        html = html.replace(/\$\{currentProduct\.photoSrc\}/g, currentProduct.photoSrc);
+        html = html.replace(/\$\{currentProduct\.alt\}/g, currentProduct.alt);
+        html = html.replace(/\$\{currentProduct\.article\}/g, currentProduct.article);
+        html = html.replace(/\$\{currentProduct\.brand\}/g, currentProduct.brand);
+        html = html.replace(/\$\{currentProduct\.price\}/g, currentProduct.price);
+        loadDiv.innerHTML = html;
+        returnMain();
+        productPage();
     }
 }
 
-window.addEventListener('load', e => {
-    const currentPage = localStorage.getItem('pageNum')
-    switch (currentPage) {
-        case '0': mainPageRequest(); break;
-        case '1': catalogPageRequest(); break;
-        case '2': descriptionPageRequest(); break;
-        default: mainPageRequest();
+const checkHash = () => {
+    const stateStr = window.location.hash.slice(1);
+    switch (stateStr) {
+        case 'main': mainPageRequest(); break;
+        case 'catalog': catalogPageRequest(); break;
+        default: descriptionPageRequest();
     }
+}
+checkHash();
 
-})
+window.addEventListener('hashchange', checkHash)
 
 const cfg = {
     attributes: true,
@@ -69,9 +100,14 @@ const cfg = {
 const mutation = (mutationsList, observer) => {
     for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
-            const moreButton = document.querySelector('[value=moreBtn]');
-            moreButton?.addEventListener('click', descriptionPageRequest);
-            localStorage.setItem('pageNum', 2);
+            const outputDiv = document.getElementById('output');
+            outputDiv?.addEventListener('click', e => {
+                const target = e.target;
+                const card = target.parentElement;
+                const cardName = card.childNodes[3].outerText;
+                localStorage.setItem('currentProductName', cardName);
+                if (target.tagName === 'BUTTON') descriptionPageRequest();
+            });
         }
     }
 }
@@ -80,4 +116,10 @@ const observer = new MutationObserver(mutation);
 
 observer.observe(loadDiv, cfg);
 
-catalogButton.addEventListener('click', catalogPageRequest);
+catalogButton.addEventListener('click', () => window.location.hash = 'catalog');
+
+navButtons.addEventListener('click', e => {
+    const button = e.target;
+    const value = button.dataset.value
+    localStorage.setItem('catalog', value);
+})

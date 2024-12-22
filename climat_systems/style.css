@@ -140,15 +140,16 @@ header .header_down nav ul #menu_cont {
   background: white;
   border-radius: 0px 0px 10px 10px;
   display: none;
+  z-index: 3;
 }
-header .header_down nav ul #menu_cont a {
+header .header_down nav ul #menu_cont .catalog-menu {
   display: block;
   margin-top: 29px;
   margin-bottom: 38px;
   margin-left: 36px;
   color: initial;
 }
-header .header_down nav ul #menu_cont a:hover {
+header .header_down nav ul #menu_cont .catalog-menu:hover {
   color: #2d81b0;
 }
 header .header_down nav ul #menuButton:hover #menu_cont {

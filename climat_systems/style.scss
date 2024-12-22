@@ -163,8 +163,9 @@ header {
                     background: white;
                     border-radius: 0px 0px 10px 10px;
                     display: none;
+                    z-index: 3;
 
-                    a {
+                    .catalog-menu {
                         display: block;
                         margin-top: 29px;
                         margin-bottom: 38px;

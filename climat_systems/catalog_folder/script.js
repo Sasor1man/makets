@@ -44,7 +44,10 @@ const script = () => {
     }
 
     const resetFilters = () => {
-        localStorage.clear();
+        localStorage.removeItem('catalog');
+        localStorage.removeItem('checkedBoxes');
+        localStorage.removeItem('priceInputs');
+        localStorage.removeItem('selectOpt');
         location.reload();
     }
 
@@ -132,7 +135,7 @@ const script = () => {
             const checkedBoxes = parse('checkedBoxes');
 
             brandInputs.forEach(element => {
-                if (checkedBoxes.includes(element.value)) element.checked = true;
+                if (checkedBoxes?.includes(element.value)) element.checked = true;
             })
         }
 
@@ -152,6 +155,7 @@ const script = () => {
             const category = localStorage.catalog;
             const catalogBtns = Array.from(catalog.querySelectorAll('[name=catalog]'))
             catalogBtns.find(button => button.value === category).classList.add('active');
+            filterRequest()
         }
     }
     load()

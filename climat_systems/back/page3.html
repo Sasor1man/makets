@@ -8,25 +8,25 @@
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 10.59L4.32659 6L0 1.41L1.33198 0L7 6L1.33198 12L0 10.59Z" fill="#2F3B42" />
         </svg>
-        <p>${}</p>
+        <p>${currentProduct.category}</p>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 10.59L4.32659 6L0 1.41L1.33198 0L7 6L1.33198 12L0 10.59Z" fill="#2F3B42" />
         </svg>
-        <span>${}</span>
+        <span>${currentProduct.title}</span>
     </aside>
-    <img src="${e.photoSrc}" alt="${e.alt}">
+    <img src="${currentProduct.photoSrc}" alt="${currentProduct.alt}">
     <div class="product-title">
         <svg width="327" height="7" viewBox="0 0 327 7" fill="none" xmlns="http://www.w3.org/2000/svg">
             <line x1="3.5" y1="3.5" x2="323.5" y2="3.5" stroke="#3187B7" stroke-width="7" stroke-linecap="round" />
         </svg>
-        <h3>${}</h3>
+        <h3>${currentProduct.title}</h3>
         <div class="product-mainInfo">
-            <p><span>Артикул:</span> ${}</p>
-            <p><span>Серия:</span> ${}</p>
-            <p><span>Категория:</span> ${}</p>
+            <p><span>Артикул:</span> ${currentProduct.article}</p>
+            <p><span>Серия:</span> ${currentProduct.brand}</p>
+            <p><span>Категория:</span> ${currentProduct.category}</p>
         </div>
         <div class="product-price">
-            <h2>${} руб.</h2>
+            <h2>${currentProduct.price} руб.</h2>
             <button class="button">Заказать</button>
         </div>
         <p>Доставка во все районы города и Ленинградскую область. Бесплатная доставка в черте города и скидка на монтаж
@@ -36,10 +36,10 @@
 </div>
 <div class="product-description">
     <div class="grey-line"></div>
-    <div class="blue-line"></div>
-    <h3>Описание</h3>
-    <h3>Характеристики</h3>
-    <div class="moveble">
+    <div class="blue-line" id="bl"></div>
+    <h3 id="description">Описание</h3>
+    <h3 id="characteristic">Характеристики</h3>
+    <div class="moveble" id="moveble">
         <div class="description">
             <ul>
                 <li>Interdum sit facilisi eu phasellus urna. Maecenas imperdiet sagittis, ut penatibus ornare
@@ -118,4 +118,32 @@
     </div>
     <div class="grey-line"></div>
 </div>
-<div class="similar"></div>
+<div class="similar">
+    <div class="models">
+        <svg width="327" height="7" viewBox="0 0 327 7" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="blue_line">
+            <line x1="3.5" y1="3.5" x2="323.5" y2="3.5" stroke="#3187B7" stroke-width="7" stroke-linecap="round" />
+        </svg>
+        <h2>ПОХОЖИЕ ТОВАРЫ</h2>
+        <div class="models_cont">
+            <div class="models_lins">
+                <img src="./pictures/models/5891.png" alt="5981">
+                <h3>Nisl bibendum enim </h3>
+                <p>25 550 руб.</p>
+                <button value="moreBtn">Подробнее</button>
+            </div>
+            <div class="models_lins">
+                <img src="pictures/models/5892.png" alt="5892">
+                <h3>Nisl bibendum enim</h3>
+                <p>60 550 руб.</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="models_lins">
+                <img src="pictures/models/5893.png" alt="5893">
+                <h3>jyuf ketoghje nim </h3>
+                <p>40 550 руб.</p>
+                <button>Подробнее</button>
+            </div>
+        </div>
+    </div>
+</div>
