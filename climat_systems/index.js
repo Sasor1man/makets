@@ -1,5 +1,6 @@
 const loadDiv = document.getElementById('load');
 const catalogButton = document.querySelector('[value=menuButton]');
+const mainButton = document.querySelector('[alt=head-pict]');
 const moreButton = document.querySelector('[value=moreBtn]');
 const navButtons = document.getElementById('menu_cont');
 
@@ -64,7 +65,8 @@ const descriptionPageRequest = () => {
         const products = JSON.parse(localStorage.getItem('products'));
         const currentProduct = products.find(e => e.title === cardName);
         let html = xhr.responseText;
-        window.location.hash = currentProduct.title
+        window.location.hash = currentProduct.title;
+
 
         html = html.replace(/\$\{currentProduct\.category\}/g, translateCategory(currentProduct.category));
         html = html.replace(/\$\{currentProduct\.title\}/g, currentProduct.title);
@@ -75,7 +77,7 @@ const descriptionPageRequest = () => {
         html = html.replace(/\$\{currentProduct\.price\}/g, currentProduct.price);
         loadDiv.innerHTML = html;
         returnMain();
-        productPage();
+        productPage(currentProduct);
     }
 }
 
@@ -123,3 +125,6 @@ navButtons.addEventListener('click', e => {
     const value = button.dataset.value
     localStorage.setItem('catalog', value);
 })
+
+mainButton.addEventListener('click', mainPageRequest)
+

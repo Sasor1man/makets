@@ -75,6 +75,7 @@ header {
             height: 68.38px;
             top: 24.13px;
             left: 86px;
+            cursor: pointer;
         }
 
         p {
@@ -203,6 +204,49 @@ header {
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
+            }
+            span {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 23px;
+                left: 263px;
+                width: 20px;
+                height: 20px;
+                background: white;
+                border-radius: 50%;
+            }
+            .basket-div {
+                width: inherit;
+                position: absolute;
+                translate: 0 76px;
+                background-color: rgb(228, 227, 227);
+                border: solid 1px black;
+                & > ul {
+                    width: inherit;
+                    & > li {
+                        width: inherit;
+                        height: 70px;
+                        position: relative;
+                        & > img {
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            left: 25px;
+                            top: 50%;
+                            translate: 0 -50%;
+                        }
+                        & > svg {
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            right: 25px;
+                            top: 50%;
+                            translate: 0 -50%;
+                        }
+                    }
+                }
             }
         }
     }
