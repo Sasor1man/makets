@@ -22,6 +22,8 @@ const mainPageRequest = () => {
 
     xhr.send();
 
+    xhr.timeout = 10000
+
     xhr.onload = () => {
         loadDiv.removeAttribute('class');
         window.location.hash = 'main'
@@ -86,7 +88,7 @@ const checkHash = () => {
     switch (stateStr) {
         case 'main': mainPageRequest(); break;
         case 'catalog': catalogPageRequest(); break;
-        default: descriptionPageRequest();
+        default: mainPageRequest();
     }
 }
 checkHash();
