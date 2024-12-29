@@ -20,7 +20,10 @@ const productPage = (currentProduct) => {
     });
 
     const saveOrder = () => {
-        localStorage.setItem('basket', JSON.stringify(currentProduct))
+        const products = JSON.parse(localStorage.getItem('basket')) || [];
+        products.push(currentProduct);
+        localStorage.setItem('basket', JSON.stringify(products));
+        changeBasket();
     }
 
     orderButton.addEventListener('click', saveOrder)

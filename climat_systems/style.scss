@@ -190,7 +190,7 @@ header {
             }
         }
 
-        .header_left {
+        #header_left {
             position: absolute;
             width: 468px;
             height: 77.43px;
@@ -198,6 +198,9 @@ header {
             top: -8%;
             border-radius: 50px 0px 0px 50px;
             background: #c8ebff;
+            &:hover {
+                cursor: pointer;
+            }
 
             p {
                 position: absolute;
@@ -217,15 +220,19 @@ header {
                 background: white;
                 border-radius: 50%;
             }
-            .basket-div {
+            #basket-div {
                 width: inherit;
                 position: absolute;
                 translate: 0 76px;
-                background-color: rgb(228, 227, 227);
-                border: solid 1px black;
+                z-index: 4;
+                overflow: hidden;
+
+                // border-radius: 25px 0 0 25px;
                 & > ul {
                     width: inherit;
                     & > li {
+                        border: solid 1px black;
+                        background-color: rgb(228, 227, 227);
                         width: inherit;
                         height: 70px;
                         position: relative;
@@ -247,6 +254,12 @@ header {
                         }
                     }
                 }
+            }
+            .basketLeft {
+                transition: translate 1s ease;
+            }
+            .basketRight {
+                translate: 100% 0;
             }
         }
     }
